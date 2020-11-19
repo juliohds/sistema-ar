@@ -61,7 +61,7 @@ public class EnvioEmail {
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
 
-                        return new PasswordAuthentication("programatche@gmail.com", "c0l0rad0*");//email e senha usu·rio 
+                        return new PasswordAuthentication("programatche@gmail.com", "c0l0rad0*");//email e senha usu√°rio 
                     }
                 });
 
@@ -90,7 +90,7 @@ public class EnvioEmail {
     {
         boolean retorno = false; 
         Properties props = new Properties();
-            /** Par‚metros de conex„o com servidor Hotmail */
+            /** Par√¢metros de conex√£o com servidor Hotmail */
             props.put("mail.transport.protocol", "smtp");
             props.put("mail.smtp.host", "smtp.live.com");
             props.put("mail.smtp.socketFactory.port", "587");
@@ -103,10 +103,10 @@ public class EnvioEmail {
                         new javax.mail.Authenticator() {
                              protected PasswordAuthentication getPasswordAuthentication() 
                              {
-                                   return new PasswordAuthentication("juliohenrique97@hotmail.com", "02041997");
+                                   return new PasswordAuthentication("juliohenrique97@hotmail.com", "1571548");
                              }
                         });
-            /** Ativa Debug para sess„o */
+            /** Ativa Debug para sess√£o */
             session.setDebug(true);
             try {
 
@@ -114,10 +114,10 @@ public class EnvioEmail {
                   message.setFrom(new InternetAddress("juliohenrique97@hotmail.com")); //Remetente
        
                   message.setRecipients(Message.RecipientType.TO, 
-                                    InternetAddress.parse(emailDestinatario)); //Destinat·rio(s)
+                                    InternetAddress.parse(emailDestinatario)); //Destinat√°rio(s)
                   message.setSubject(assunto);//Assunto
                   message.setText(msg);
-                  /**MÈtodo para enviar a mensagem criada*/
+                  /**M√©todo para enviar a mensagem criada*/
                   Transport.send(message);
                   System.out.println("Feito!!!");
                   retorno = true;
